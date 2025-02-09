@@ -38,14 +38,12 @@
   </link>
 
   <joint name="base_link" type="fixed">
+
     <parent link="base_link"/>
     <child link="body_link"/>
-    <!-- <dynamics friction="0.0001"/> -->
 
     <origin xyz="0 0 0.5"/>
-    <!-- <axis xyz="0 0 1"/> -->
 
-    <!-- <limit lower="-3.14" upper="3.14" effort="10.0" velocity="0.5"/> -->
   </joint>
 
   <link name="top_link">
@@ -67,6 +65,7 @@
   </link>
 
   <joint name="body_link" type="continuous">
+
     <parent link="body_link"/>
     <child link="top_link"/>
     <dynamics friction="0.0001"/>
@@ -75,10 +74,7 @@
     <axis xyz="0 0 1"/>
 
     <limit lower="-3.14" upper="3.14" effort="10.0" velocity="0.5"/>
-    <!-- <parent link="body_link"/>
-    <child link="top_link"/>
 
-    <origin xyz="0.5 0 2"/> -->
   </joint>
 
 </robot>

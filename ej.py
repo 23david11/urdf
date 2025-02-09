@@ -15,10 +15,10 @@ start_position = [0, 0, 1]
 
 robotID = p.loadURDF("ej.urdf", start_position, startOrientation)
 
-frictionID = p.addUserDebugParameter("friction", 0, 10, 5)
+frictionID = p.addUserDebugParameter("friction", 0, 10, 3)
 torqueID = p.addUserDebugParameter("torque", -10, 10, 0)
 
-for i in range (100000):
+for i in range (10000):
 
     friction = p.readUserDebugParameter(frictionID)
     torque = p.readUserDebugParameter(torqueID)
